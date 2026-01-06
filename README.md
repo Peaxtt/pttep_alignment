@@ -20,7 +20,7 @@ sudo apt install ros-$ROS_DISTRO-geometry-msgs \
 sudo apt install libeigen-dev
 ```
 
-## -Package Structure
+## - Package Structure
 โครงสร้างไฟล์ภายในแพ็กเกจประกอบด้วย:
 ```
 pttep_alignment/
@@ -32,7 +32,7 @@ pttep_alignment/
     └── CalculateTransformation.srv # Custom Service Definition (bool reset)
 ```
 
-## -Installation (ขั้นตอนการติดตั้ง)
+## - Installation (ขั้นตอนการติดตั้ง)
 รัน cmd บน Terminal นี้หลังจากลงไฟล์และ Library ทั้งหมดเรียบร้อยแล้ว
 ```bash
 # ใส่ตำแหน่งของ Workspace ให้ถูก
@@ -41,7 +41,7 @@ colcon build --packages-select pttep_alignment
 source install/setup.bash
 ```
 
-## -Usage Guide (วิธีการใช้งาน)
+## - Usage Guide (วิธีการใช้งาน)
 1. เริ่มรันโหนดหลัก (Solver Node)
 ```bash
 ros2 run pttep_alignment alignment_node
