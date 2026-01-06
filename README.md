@@ -40,7 +40,7 @@ cd ~/ros2_ws
 colcon build --packages-select pttep_alignment
 source install/setup.bash
 ```
-สำคัญ: หากชื่อ Topic ของคุณต่างออกไป ให้ทำการ Remap ดังนี้:
+`สำคัญ: หากชื่อ Topic ของคุณต่างออกไป ให้ทำการ Remap ดังนี้:`
 2. รัน cmd นี้บน Terminal โดยเปลี่ยน pose_topic และ gps_topic ให้ตรงกัน Topic จริง 
 ```bash
 # หลังจาก build และ source แล้ว
