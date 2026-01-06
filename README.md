@@ -66,8 +66,9 @@ ros2 service call /calculate_transformation pttep_alignment/srv/CalculateTransfo
 ros2 service call /calculate_transformation pttep_alignment/srv/CalculateTransformation "{reset: true}"
 ```
 ## - Constraints
-ในการใช้งานจริง มีเงื่อนไขทางเทคนิคที่คุณต้องทราบเพื่อให้การคำนวณแม่นยำ:
-
+ในการใช้งานจริง มีเงื่อนไขดังนี้:
+```
 1.Data Synchronization: เมื่อเรียก /save_location ระบบจะเช็คเวลา (Timestamp) ของทั้งสองเซนเซอร์ ห้ามห่างกันเกิน 1.0 วินาที
 
 2.Point Collection: ต้องเก็บจุดพิกัดในตำแหน่งที่ต่างกันอย่างน้อย 3 จุด ขึ้นไป
+```
