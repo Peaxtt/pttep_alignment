@@ -41,9 +41,12 @@ colcon build --packages-select pttep_alignment
 source install/setup.bash
 ```
 
-2. รัน cmd นี้บน Terminal โดยเปลี่ยน #real_pose_topic และ #real_gps_topic ให้ตรงกัน Topic จริง
+2. รัน cmd นี้บน Terminal โดยเปลี่ยน pose_topic และ gps_topic ให้ตรงกัน Topic จริง
 ```bash
-ros2 run pttep_alignment alignment_node --ros-args -r /current_pose:=/#real_pose_topic -r /gps:=/#real_gps_topic
+# หลังจาก build และ source แล้ว
+ros2 run pttep_alignment alignment_node --ros-args \
+  -r /current_pose:=/ชื่อ_topic_slam_จริง \
+  -r /gps:=/ชื่อ_topic_gps_จริง
 ```
 
 ## - Usage Guide (วิธีการใช้งาน)
