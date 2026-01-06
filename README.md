@@ -33,12 +33,17 @@ pttep_alignment/
 ```
 
 ## - Installation (ขั้นตอนการติดตั้ง)
-รัน cmd บน Terminal นี้หลังจากลงไฟล์และ Library ทั้งหมดเรียบร้อยแล้ว
+รัน cmd นี้บน Terminal นี้หลังจากลงไฟล์และ Library ทั้งหมดเรียบร้อยแล้ว
 ```bash
 # ใส่ตำแหน่งของ Workspace ให้ถูก
 cd ~/ros2_ws 
 colcon build --packages-select pttep_alignment
 source install/setup.bash
+```
+## - เปลี่ยน Topic ให้ตรง
+รัน cmd นี้บน Terminal โดยเปลี่ยน #real_pose_topic และ #real_gps_topic ให้ตรงกัน Topic จริง
+```bash
+ros2 run pttep_alignment alignment_node --ros-args -r /current_pose:=/#real_pose_topic -r /gps:=/#real_gps_topic
 ```
 
 ## - Usage Guide (วิธีการใช้งาน)
