@@ -75,8 +75,8 @@ private:
 
         // 1.3 คำนวณน้ำหนักจาก Covariance 
         // ดึง Variance X (index 0) และ Y (index 7) ของ LIDAR
-        double var_x = last_lidar_msg_->pose.pose.covariance[0];
-        double var_y = last_lidar_msg_->pose.pose.covariance[7];
+        double var_x = last_lidar_msg_->pose.covariance[0];
+        double var_y = last_lidar_msg_->pose.covariance[7];
         double w = 1.0 / (var_x + var_y + 1e-6); 
 
         pts_lidar_.push_back({last_lidar_msg_->pose.pose.position.x, last_lidar_msg_->pose.pose.position.y});
